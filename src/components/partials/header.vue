@@ -1,6 +1,6 @@
 <template>
     <div id="nav" class="menu-navigation">
-        <router-link to="/about"><h1 class="logo">JANE</h1></router-link>
+        <a href="/about"><h1 class="logo">JANE</h1></a>
         <i class="burger">
             <svg xmlns="http://www.w3.org/2000/svg" width="58.285" height="27.514" viewBox="0 0 58.285 27.514">
                 <g id="Groupe_12" data-name="Groupe 12" transform="translate(-1750.395 -69.217)">
