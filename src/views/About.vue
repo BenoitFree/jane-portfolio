@@ -181,6 +181,7 @@
 import image from "@/assets/img/about-wave.svg"
 
 export default {
+    name: 'About',
     data: function () {
         return {
             image: image,

@@ -55,6 +55,7 @@ const initSwiperHome = () => {
 };
 
 export default {
+  name: 'Home',
   beforeCreate: function() {
       document.body.className = 'home';
   },
