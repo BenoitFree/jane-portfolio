@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'AméliaDisplayBlack';
+    src: url('../assets/fonts/Rebeqa-Black.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Black.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplayBlackIta';
+    src: url('../assets/fonts/Rebeqa-BlackItalic.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-BlackItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplay';
+    src: url('../assets/fonts/Rebeqa-Bold.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplayLight';
+    src: url('../assets/fonts/Rebeqa-Light.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Light.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplayMed';
+    src: url('../assets/fonts/Rebeqa-Medium.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplay';
+    src: url('../assets/fonts/Rebeqa-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplaySemBd';
+    src: url('../assets/fonts/Rebeqa-SemiBold.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AméliaDisplayThin';
+    src: url('../assets/fonts/Rebeqa-Thin.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Thin.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Rebeqa-Thin.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+h1, h2, h3, h4, h5{
+    font-family: "AméliaDisplayBlack";
+}
+
+p{
+    font-family: 'Oswald', sans-serif !important;
+}
