@@ -1,5 +1,5 @@
 <template>
-<div class="swiper-projets swiper-container">
+<div id="swiper-home" class="swiper-projets swiper-container">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -29,8 +29,10 @@
 
 
 <script>
-import image_spray from "@/assets/img/projets/spray.png"
-import image_doort from "@/assets/img/projets/doort.png"
+import image_camus from "@/assets/img/projets/Camus.png"
+import image_doort from "@/assets/img/projets/Doort.png"
+import image_metapoly from "@/assets/img/projets/Metapoly.png"
+import image_mira from "@/assets/img/projets/Mira.png"
 import separator from "@/assets/img/separator.png"
 import arrowPrev from "@/assets/img/arrow-prev.png"
 import arrowNext from "@/assets/img/arrow-next.png"
@@ -39,10 +41,12 @@ import "swiper/swiper-bundle.css";
 
 const initSwiperHome = () => {
     // Init Swiper
-    let swiper = new Swiper(".swiper-container", {
+    let swiper = new Swiper("#swiper-home", {
         // Optional parameters
+        loop: true,
         effect: "fade",
         direction: "vertical",
+        mousewheel: true,
         fadeEffect: {
           crossFade: true,
         },
@@ -57,7 +61,7 @@ const initSwiperHome = () => {
 export default {
   name: 'Home',
   beforeCreate: function() {
-      document.body.className = 'home';
+    document.body.className = 'home';
   },
   mounted() {
       initSwiperHome();
@@ -75,31 +79,40 @@ export default {
       items: [
         {
           projet: {
-            title: "Print Design",
-            description: "Stand en grande distribution - CAMUS",
-            lien: "test",
-            image: image_spray,
-            color_background: "#c6bcb5"
+            title: "UI/UX DESIGN",
+            description: "E-shop - METAPOLY",
+            lien: "https://metapoly.fr",
+            image: image_metapoly,
+            color_background: "#E8DBD8",
           },
-        }, 
+        },
+        {
+          projet: {
+            title: "PRINT DESIGN",
+            description: "Print design - Retail stand Camus",
+            lien: "test",
+            image: image_camus,
+            color_background: "#C6BCB5",
+          },
+        },
         {
           projet: {
             title: "Global Design",
-            description: "Lancement de produit - DOORT",
+            description: "Global design - Product launch Doort",
             lien: "test",
             image: image_doort,
-            color_background: "#3F4367",
+            color_background: "#6A6983",
           },
         },
         {
           projet: {
-            title: "Identity Design",
-            description: "Lorem",
-            lien: "test",
-            image: image_spray,
-            color_background: "#c6bcb5",
+            title: "UI/UX DESIGN",
+            description: "E-commerce - MIRA",
+            lien: "https://boutiquemira.fr",
+            image: image_mira,
+            color_background: "#79C1A8"
           },
-        },
+        }, 
       ]
     }
   }
@@ -111,14 +124,14 @@ body.home .swiper-button-next{
   background-image: url("../assets/img/arrow-next.png") !important;
   background-repeat: no-repeat;
   background-size: contain;
-  left: 8rem;
+  left: 4rem;
   top: 29rem;
 }
 body.home .swiper-button-prev{
   background-image: url("../assets/img/arrow-prev.png") !important;
   background-repeat: no-repeat;
   background-size: contain;
-  left: 8rem;
+  left: 4rem;
   top: 24rem;
 }
 body.home .swiper-button-prev::after, .swiper-button-next::after{
@@ -148,20 +161,38 @@ body.home .swiper-button-next{
   background-image: asset("arrow-next.png") !important;
   background-repeat: no-repeat;
   background-size: contain;
-  left: 8rem;
+  left: 4rem;
   top: 29rem;
 }
 body.home .swiper-button-prev{
   background-image: asset("arrow-prev.png") !important;
   background-repeat: no-repeat;
   background-size: contain;
-  left: 8rem;
+  left: 4rem;
   top: 24rem;
 }
 </style>
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
 @import '@/assets/global.scss';
+@media screen and(min-width: 1000px) and (max-width: 1445px) {
+  .home{
+    & h2.titre{
+      font-size: 160px !important;
+    }
+    & h3.description{
+      font-size: 25px !important;
+    }
+    & .following button{
+      width: 310px!important;
+      font-size: 25px !important;
+      height: 60px!important;
+    }
+    .slide-right img{
+      width: 310px !important;
+    }
+  }
+}
 
 #app { height: 100% }
 html {
@@ -203,18 +234,22 @@ html {
     width: 100%;
     & h2{
       font-family: "AméliaDisplay" !important;
-      font-size: 260px;
+      font-size: 202px;
       text-transform: uppercase;
       color: #fff;
       line-height: .8;
       margin: 0;
       max-width: 200px;
+      padding-top: 12px;
     }
     & h3{
       font-family: 'Oswald', sans-serif !important;
-      font-size: 35px;
+      font-size: 30px;
       font-weight: 200;
       color: #fff;
+    }
+    & .slide-right img{
+      width: 350px;
     }
     & .following{
       display: block;
@@ -231,7 +266,7 @@ html {
         font-weight: bold;
         cursor: pointer;
         transition: 0.25s ease;
-        width: 397px;
+        width: 350px;
         height: 70px;
       }
     }
@@ -239,8 +274,8 @@ html {
 
   & .slide-left img {
     display: block;
-    width: 628px;
-    height: 628px;
+    width: 528px;
+    height: 528px;
   }
 
   & .slide-svg{
@@ -248,6 +283,8 @@ html {
     right: 0;
     bottom: 0;
     z-index: 0;
+    height: auto;
+    width: auto;
   }
 
   & .slide-left, .slide-right{
@@ -261,8 +298,10 @@ html {
     margin-left: auto;
   }
 
-  $breakpoint-tablet: 768px;
   $breakpoint-laptop: 1605px;
+  $breakpoint-macbook: 1445px;
+  $breakpoint-ipadpro: 1055px;
+  $breakpoint-tablet: 768px;
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
     .slide-left img {
       display: block;
@@ -271,7 +310,8 @@ html {
       object-fit: cover;
     }
     .slide-svg{
-      right: -15rem;
+      right: -3rem;
+      height: 110%;
     }
   }
 }

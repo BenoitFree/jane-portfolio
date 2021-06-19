@@ -1,6 +1,6 @@
 <template>
     <div id="footer">
-        <svg id="Groupe_3" data-name="Groupe 3" xmlns="http://www.w3.org/2000/svg" width="130.176" height="131.526" viewBox="0 0 130.176 131.526">
+        <svg class="rotating" id="Groupe_3" data-name="Groupe 3" xmlns="http://www.w3.org/2000/svg" width="130.176" height="131.526" viewBox="0 0 130.176 131.526">
             <g id="Groupe_2" data-name="Groupe 2">
                 <g id="Groupe_1" data-name="Groupe 1">
                 <path id="Tracé_2" data-name="Tracé 2" d="M877.526,542.694a3.235,3.235,0,0,1,.939-1.763,2.775,2.775,0,0,1,1.65-.656,7.072,7.072,0,0,1,2.2.2l3.918.921a7.058,7.058,0,0,1,2.1.813,2.659,2.659,0,0,1,1.152,1.393,3.858,3.858,0,0,1,.009,2.175,4.092,4.092,0,0,1-.886,1.889,2.455,2.455,0,0,1-1.431.771,4.9,4.9,0,0,1-1.9-.109l-.68-.16.545-2.328.826.2a5.542,5.542,0,0,0,.83.133.992.992,0,0,0,.618-.137.978.978,0,0,0,.363-.625.906.906,0,0,0-.084-.751,1.2,1.2,0,0,0-.565-.421,5.607,5.607,0,0,0-.8-.252l-5.191-1.218a4.159,4.159,0,0,0-.9-.122,1.149,1.149,0,0,0-.684.184,1.2,1.2,0,0,0-.31,1.384,1.258,1.258,0,0,0,.549.487,4.108,4.108,0,0,0,.88.306l1.245.294.266-1.143,1.446.339-.773,3.3-6.015-1.415.366-1.56,1.09.1a2.2,2.2,0,0,1-.72-.9A2.068,2.068,0,0,1,877.526,542.694Z" transform="translate(-759.735 -464.559)" fill="#fff"/>
@@ -54,14 +54,48 @@
 <style lang="scss" scoped>
     #footer{
         position: fixed;
-        left: 0;
-        right: 0;
+        right: 2rem;
         bottom: 36px;
-        max-width: calc(100% - 78px);
+        width: auto;
         margin: 0 auto;
         z-index: 111;
         & svg{
             float: right;
         }
     }
+    @-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 20s linear infinite;
+  -moz-animation: rotating 20s linear infinite;
+  -ms-animation: rotating 20s linear infinite;
+  -o-animation: rotating 20s linear infinite;
+  animation: rotating 20s linear infinite;
+}
 </style>
