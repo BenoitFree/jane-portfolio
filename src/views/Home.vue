@@ -12,7 +12,7 @@
           <h2 class="titre">{{ item.projet.title }}</h2>
           <img alt="separateur ligne" :src="separator">
           <h3 class="description">{{ item.projet.description }}</h3>
-          <a class="following" :href="`${item.projet.lien}`"><button>View Project</button></a>
+          <router-link class="following" :to="`${item.projet.lien}`"><button>View Project</button></router-link>
         </div>
       </div>
       <svg class="slide-svg" xmlns="http://www.w3.org/2000/svg" width="1733.364" height="1104.322" viewBox="0 0 1733.364 1104.322">
@@ -46,7 +46,10 @@ const initSwiperHome = () => {
         loop: true,
         effect: "fade",
         direction: "vertical",
-        mousewheel: true,
+        speed: 500,
+        mousewheel: {
+          sensitivity: 2
+        },
         fadeEffect: {
           crossFade: true,
         },
@@ -81,7 +84,7 @@ export default {
           projet: {
             title: "UI/UX DESIGN",
             description: "E-shop - METAPOLY",
-            lien: "https://metapoly.fr",
+            lien: "/work/metapoly",
             image: image_metapoly,
             color_background: "#E8DBD8",
           },
@@ -90,7 +93,7 @@ export default {
           projet: {
             title: "PRINT DESIGN",
             description: "Print design - Retail stand Camus",
-            lien: "test",
+            lien: "/",
             image: image_camus,
             color_background: "#C6BCB5",
           },
@@ -99,7 +102,7 @@ export default {
           projet: {
             title: "Global Design",
             description: "Global design - Product launch Doort",
-            lien: "test",
+            lien: "https://doort.fr",
             image: image_doort,
             color_background: "#6A6983",
           },
@@ -108,7 +111,7 @@ export default {
           projet: {
             title: "UI/UX DESIGN",
             description: "E-commerce - MIRA",
-            lien: "https://boutiquemira.fr",
+            lien: "/work/Mira",
             image: image_mira,
             color_background: "#79C1A8"
           },
@@ -263,7 +266,7 @@ html {
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif !important;
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 400;
         cursor: pointer;
         transition: 0.25s ease;
         width: 350px;

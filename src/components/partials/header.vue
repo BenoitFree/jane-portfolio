@@ -61,9 +61,9 @@
             </svg>
             <svg v-bind:class="{ icon_is_open: isActive }" class="icon_is_close" xmlns="http://www.w3.org/2000/svg" width="68.468" height="33.146" viewBox="0 0 68.468 33.146">
                 <g id="Groupe_56" data-name="Groupe 56" transform="translate(-1750.395 -68.717)">
-                    <line id="Ligne_1" data-name="Ligne 1" x2="68.468" transform="translate(1750.395 69.717)" fill="" stroke="" stroke-miterlimit="10" stroke-width="2"/>
-                    <line id="Ligne_2" data-name="Ligne 2" x2="68.468" transform="translate(1750.395 85.29)" fill="" stroke="" stroke-miterlimit="10" stroke-width="2"/>
-                    <line id="Ligne_3" data-name="Ligne 3" x2="68.468" transform="translate(1750.395 100.863)" fill="" stroke="" stroke-miterlimit="10" stroke-width="2"/>
+                    <line id="Ligne_1" data-name="Ligne 1" x2="68.468" transform="translate(1750.395 69.717)" fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+                    <line id="Ligne_2" data-name="Ligne 2" x2="68.468" transform="translate(1750.395 85.29)" fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+                    <line id="Ligne_3" data-name="Ligne 3" x2="68.468" transform="translate(1750.395 100.863)" fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
                 </g>
             </svg>
         </i>
@@ -74,9 +74,9 @@
                 <img alt="utopie" class="global-image" :src="image_utopie">
             </div>
             <div @click="isActive = !isActive" class="global-items">
-                <router-link class="global-link" style="cursor: not-allowed" to="/">WORK</router-link>
+                <router-link class="global-link" to="/work">WORK</router-link>
                 <router-link class="global-link" to="/about">ABOUT</router-link>
-                <router-link class="global-link" style="cursor: not-allowed" to="/">CONTACT</router-link>
+                <router-link class="global-link" to="/contact">CONTACT</router-link>
             </div>
         </div>
     </div>
@@ -119,12 +119,14 @@
                 margin-left: 3rem;
                 font-family: "AméliaDisplayBlack";
                 font-size: 170px;
-                margin-top: 1rem;
+                margin-top: .99rem;
                 color: #000;
+                padding-top: 1px;
                 text-decoration: none;
                 transition: opacity 150ms ease;
                 &:hover{
-                    opacity: .8;
+                    opacity: 1;
+                    color: #fff;
                 }
             }
         }
@@ -188,13 +190,6 @@
 <script>
 import image_utopie from "@/assets/img/Utopie.png";
 export default{
-    /*methods: {
-        openMenu(){
-           let mymodal = this.$refs.modal
-           console.log(mymodal)
-           mymodal.classList.toggle("is-open")
-        }
-    }*/
     data: function () {
         return {
             image_utopie: image_utopie,

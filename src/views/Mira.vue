@@ -1,47 +1,40 @@
 <template>
-    <div id="metapoly" class="scroll-container" data-scroll-container>
+    <div id="mira" class="scroll-container" data-scroll-container>
         <div class="scroll-section start" data-scroll-section>
             <div>
-                <h1>E-shop - METAPOLY</h1>
+                <h1>E-shop - mira</h1>
                 <p>
-                    Shirley and Louise are two young women who are launching their designer furniture sales project based on ecological values. I worked on their e-commerce from a simple and modern style that leaves room for the beauty of the furniture in a sober and elegant way.
-                    When creating an e-shop it is important to keep it simple. Your customer wants to go directly to your articles. For this the number of clicks is very important, there is every interest in reducing it to facilitate the purchase.
+                    After creating an e-commerce like their showcase site, I created for Mira, a subscription page highlighting the mystery and exclusivity of this offer. The main idea was to highlight their flagship asset : spring water. </p><p>
+I am currently working on a redesign of e-commerce on a white background, which I can’t wait to present. The Mira universe is turned towards originality. Highlighting containers worked by artists, it wants to be a « cabinet of curiosity ». </p><p>
+Based on a dark background I had, during this redesign, to rework a specific web charter preserving the spirit while focusing on the UX of a classic e-shop..
                 </p>
-                <h3>September 2020</h3>
-                <p>Webdesign  | Art Direction</p>
+                <h3>January 2020</h3>
+                <p>Webdesign  | Art Direction | Illustrations</p>
             </div>
         </div>
         <div class="scroll-section secondary" data-scroll-section>
             <div>
-                <img alt="page d'accueil de metapoly" :src="image">
+                <img alt="page d'accueil de mira" :src="image">
             </div>
         </div>
         <div class="scroll-section three" data-scroll-section>
             <div>
-                <img alt="metapoly" :src="image2">
-                <img class="moving" alt="metapoly" :src="image3">
-                <img alt="metapoly" :src="image4">
+                <img class="image_2" alt="mira" :src="image2">
+                <img class="image_3" alt="mira" :src="image3">
+                <img class="image_4" alt="mira" :src="image4">
+                <img class="image_5" alt="mira" :src="image5">
             </div>
         </div>
         <div class="scroll-section four" data-scroll-section>
             <div>
-                <img style="padding-top: 7rem;" alt="metapoly" :src="image5">
+                <img class="image_6" alt="mira" :src="image6">
+                <img class="image_7" alt="mira" :src="image7">
             </div>
         </div>
         <div class="scroll-section five" data-scroll-section>
             <div>
-                <img style="margin-top: -14rem;" alt="metapoly" :src="image6">
-            </div>
-        </div>
-        <div class="scroll-section six" data-scroll-section>
-            <div>
-                <img style="padding-top: 9.6rem;" alt="metapoly" :src="image7">
-            </div>
-        </div>
-        <div class="scroll-section seven" data-scroll-section>
-            <div>
-                <h2>Other project - <span class="transform">Mira</span></h2>
-                <router-link class="following" to="/work/mira"><button>View Project</button></router-link>
+                <h2>Other project - <span class="transform">Metapoly</span></h2>
+                <router-link class="following" to="/work/metapoly"><button>View Project</button></router-link>
                 <router-link class="following" to="/about"><button class="about">About me</button></router-link>
             </div>
         </div>
@@ -55,13 +48,13 @@ import "swiper/swiper-bundle.css";
 
 import LocomotiveScroll from 'locomotive-scroll';
 
-import image from "@/assets/img/metapoly/Image_1.png"
-import image2 from "@/assets/img/metapoly/Image_2.png"
-import image3 from "@/assets/img/metapoly/Image_3.png"
-import image4 from "@/assets/img/metapoly/Image_4.png"
-import image5 from "@/assets/img/metapoly/Image_5.png"
-import image6 from "@/assets/img/metapoly/Image_6.png"
-import image7 from "@/assets/img/metapoly/Image_7.png"
+import image from "@/assets/img/mira/Image_1.png"
+import image2 from "@/assets/img/mira/Image_2.png"
+import image3 from "@/assets/img/mira/Image_3.png"
+import image4 from "@/assets/img/mira/Image_4.png"
+import image5 from "@/assets/img/mira/Image_5.png"
+import image6 from "@/assets/img/mira/Image_6.png"
+import image7 from "@/assets/img/mira/Image_7.png"
 
 const initScroll = () => {
     const scroll = new LocomotiveScroll({
@@ -73,7 +66,7 @@ const initScroll = () => {
 }
 
 export default {
-    name: 'Metapoly',
+    name: 'mira',
     data: function () {
         return {
             image: image,
@@ -86,7 +79,7 @@ export default {
         }
     },
     beforeCreate: function() {
-        document.body.className = 'metapoly';
+        document.body.className = 'mira';
     },
     mounted() {
         initScroll();
@@ -97,10 +90,10 @@ export default {
 }
 </script>
 <style>
-body.metapoly{
+body.mira{
     overflow: hidden;
 }
-body.metapoly .menu-navigation .burger svg > * {
+body.mira .menu-navigation .burger svg > * {
     stroke: #000;
 }
 </style>
@@ -114,19 +107,22 @@ body.metapoly .menu-navigation .burger svg > * {
     display: inline-flex;
 }
 @media screen and(max-width: 1509px){
-    #metapoly{
-        & .five{
-            & img{
-                margin-top: -5rem !important;
-            }
+    #mira{
+        & .three{
+            min-width: auto !important;
         }
-        & .six{
-            min-width: 80% !important;
+        & .four{
+            padding-left: 5rem !important;
+            min-width: 60% !important;
+            & img.image_7{
+                padding-top: 4rem !important;
+                object-fit: cover !important;
+            }
         }
     }
 }
 @media screen and(min-width: 1510px){
-    #metapoly{
+    #mira{
         & .scroll-section{
             background-position-y: bottom !important;
         }
@@ -136,18 +132,18 @@ body.metapoly .menu-navigation .burger svg > * {
             }
         }
         & .three{
-            min-width: 50% !important;
+            //min-width: 50% !important;
         }
         & .six{
             & img{
-                padding-top: 28rem !important;
+                //padding-top: 28rem !important;
             }
         }
     }
 }
-#metapoly{
+#mira{
     & .scroll-section{
-        background-image: url("../assets/img/metapoly/parrallax.svg") !important;
+        background-image: url("../assets/img/mira/parrallax.svg") !important;
         background-repeat: no-repeat;
         background-position-y: bottom;
         background-attachment: fixed;
@@ -155,6 +151,7 @@ body.metapoly .menu-navigation .burger svg > * {
         height: 100%;
         display: flex;
         align-items: center;
+        margin-right: -1px;
         & img{
             width: 500px;
         }
@@ -173,7 +170,7 @@ body.metapoly .menu-navigation .burger svg > * {
             font-family: 'Oswald', sans-serif !important;
             text-transform: uppercase;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 400;
         }
     }
     & .start{
@@ -197,53 +194,56 @@ body.metapoly .menu-navigation .burger svg > * {
         }
     }
     & .three{
-        min-width: 70%;
+        min-width: 90%;
         & > div{
             display: flex;
         }
         img{
             object-fit: contain;
             height: auto;
-            max-width: 318px;
-            max-height: 515px;
         }
-        img.moving{
-            padding-top: 4rem;
+        img.image_2{
+            max-width: 456px;
+            max-height: 264px;
+        }
+        img.image_3{
+            padding-top: 7rem;
+            max-width: 456px;
+            max-height: 329px;
+        }
+        img.image_4{
+            padding-top: -2rem;
+            max-width: 456px;
+            max-height: 225px;
+        }
+        img.image_5{
+            padding-top: 18rem;
+            margin-left: -14rem;
+            max-width: 456px;
+            max-height: 225px;
         }
     }
     & .four{
-        padding-left: 6rem;
+        padding-left: 0rem;
+        min-width: 50%;
         & > div{
             display: flex;
-            & img{
-                width: 950px;
+            & img.image_6{
+                width: 399px;
+                max-height: 658px;
+                object-fit: contain;
+            }
+            & img.image_7{
+                padding-top: 2rem;
+                margin-left: 3rem;
+                width: 170px;
+                max-height: 328px;
                 object-fit: contain;
             }
         }
     }
     & .five{
-        padding-left: 9rem;
-        & > div{
-            display: flex;
-            & img{
-                width: 950px;
-                object-fit: contain;
-            }
-        }
-    }
-    & .six{
-        padding-left: 9rem;
-        min-width: 65%;
-        & > div{
-            display: flex;
-            & img{
-                width: 950px;
-                object-fit: contain;
-            }
-        }
-    }
-    & .seven{
-        min-width: 30%;
+        min-width: 50%;
         & > div{
             display: flex;
             flex-direction: column;
